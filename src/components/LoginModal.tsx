@@ -6,7 +6,7 @@ import { signIn } from 'next-auth/react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import StackHero from "@/components/StackHero";
+import Image from 'next/image';
 
 export function LoginModal() {
   const modalRef = useRef(null);
@@ -65,7 +65,13 @@ export function LoginModal() {
             </div>
           </div>
           <div ref={imageRef} className="hidden md:block relative rounded-r-xl overflow-hidden">
-            <StackHero />
+            <Image
+              src="/teamwork.svg"
+              alt="Hero Image"
+              width={1080}
+              height={1080}
+              className="object-cover"
+            />
           </div>
         </div>
       </DialogContent>
