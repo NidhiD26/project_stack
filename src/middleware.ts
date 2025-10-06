@@ -5,5 +5,8 @@ export { default } from "next-auth/middleware";
 // The 'config' object specifies which routes the middleware should run on.
 export const config = {
   //    This matcher array defines the paths that this middleware will protect.
-  matcher: ["/dashboard/:path*"],
+  matcher: [
+    "/dashboard/:path*", // frontend pages
+    "/api/protected/:path*", // backend API routes you want to protect
+  ],
 };
