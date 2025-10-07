@@ -1,7 +1,7 @@
 
 "use client";
 import { useSession, signOut } from "next-auth/react";
-import { LoginModal } from "@/components/LoginModal";
+import { LoginModal } from "@/components/(auth)/LoginModal";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
