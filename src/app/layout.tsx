@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import AuthProvider from "@/components/authProvider";
+import AuthProvider from "@/components/(auth)/authProvider";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased bg-background text-foreground border-border outline-ring/50`}>
+      <body className={`${poppins.className} antialiased bg-background font-poppins text-foreground border-border outline-ring/50`}>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
