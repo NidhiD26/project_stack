@@ -3,6 +3,9 @@ const config = {
     "@tailwindcss/postcss": {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ["var(--font-sans)"],
+          },
           colors: {
             border: "#EDDBC7", // var(--theme-border)
             input: "#EDDBC7", // var(--theme-input)
