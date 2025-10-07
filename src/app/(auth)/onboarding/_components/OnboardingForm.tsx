@@ -60,7 +60,7 @@ export function OnboardingForm() {
   )
 
   const removeSkill = (value: string) => {
-    const next = skills.filter((s) => s !== value)
+    const next = skills.filter((s: string) => s !== value)
     setValue("skills", next, { shouldValidate: true })
   }
 
@@ -244,7 +244,7 @@ export function OnboardingForm() {
                   Add skills and press Enter (e.g., React, Python, Figma)
                 </span>
               )}
-              {skills.map((skill) => (
+              {skills.map((skill: string) => (
                 <span
                   key={skill}
                   className="inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-xs"
@@ -256,7 +256,7 @@ export function OnboardingForm() {
                   {skill}
                   <button
                     type="button"
-                    aria-label={Remove ${skill}}
+                    aria-label={`Remove ${skill}`}
                     onClick={() => removeSkill(skill)}
                     className="rounded-sm border px-1 text-[10px] leading-none hover:opacity-80"
                     style={{
