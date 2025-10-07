@@ -256,7 +256,7 @@ export function OnboardingForm() {
                   {skill}
                   <button
                     type="button"
-                    aria-label={`Remove ${skill}`}
+                    aria-label={Remove ${skill}}
                     onClick={() => removeSkill(skill)}
                     className="rounded-sm border px-1 text-[10px] leading-none hover:opacity-80"
                     style={{
