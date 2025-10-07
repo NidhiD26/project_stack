@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { OnboardingForm } from "./components/OnboardingForm"
+import { OnboardingForm } from "./_components/OnboardingForm"
 export default function OnboardingPage() {
   return (
     <main 
