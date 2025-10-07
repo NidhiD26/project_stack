@@ -10,9 +10,7 @@ const globalForPrisma = globalThis as typeof globalThis & { prisma?: PrismaClien
 
 export const db: PrismaClient =
   globalForPrisma.prisma ??
-  new PrismaClient({
-    log: ['query'],
-  });
+  new PrismaClient
 
 if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = db;
